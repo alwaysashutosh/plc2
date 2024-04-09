@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:#A5D8DD;
+             /* Background color added here */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .top-bar {
+            background-color: #00008B;
+            padding: 10px 0;
+            text-align: right;
+            color: #fff;
+        }
+        .top-bar a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-bar a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px; /* Oval shape */
+            background-color: #2980b9; /* Light blue color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .top-bar a button:hover {
+            background-color: #87CEEB; /* Lighter shade of blue on hover */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: center;
+        }
+        .profile-block {
+            background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background color */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .profile-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .profile-details {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        /* Your CSS styles */
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/index"><button>Home</button></a>
+        <a href="/books"><button>Books</button></a>
+        <a href="/question"><button>Question Papers</button></a>
+        <a href="/profile"><button>Profile</button></a>
+        <a href="/feedback"><button>Feedback</button></a>
+        <!-- Your top bar buttons -->
+    </div>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile-block" id="profileSection">
+            <!-- Profile section will be updated dynamically -->
+        </div>
+    </div>
+
+    <script>
+        // Simulated user data (you would replace this with actual data retrieved from backend)
+        const userData = {
+            name: "Anjali Jha",
+            location: "Daman",
+            university: "SPPU",
+            branch: "Electronics and Telecommunication",
+            profileImage: "static/profile.png" // Example profile image URL
+        };
+
+        // Function to update profile section with user data
+        function updateProfile(userData) {
+            const profileSection = document.getElementById("profileSection");
+            profileSection.innerHTML = `
+                <img class="profile-image" src="${userData.profileImage}" alt="Profile Image">
+                <div class="profile-name">${userData.name}</div>
+                <div class="profile-details">Location: ${userData.location}<br>University: ${userData.university}<br>Branch: ${userData.branch}</div>
+            `;
+        }
+
+        // Simulating user login and fetching user data
+        // This could be triggered after successful login
+        // For demonstration, we are calling it immediately
+        updateProfile(userData);
+    </script>
+</body>
+</html>

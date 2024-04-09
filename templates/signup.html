@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A5D8DD;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .form-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:  blue;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #333;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    <div class="container">
+        <div class="form-section">
+            <h1>Sign Up</h1>
+            <form action="/signup" method="post">
+            {%csrf_token%}
+            <form id="signupForm" onsubmit="return redirectToHomePage()">
+                <input type="text" name = "username" placeholder="Create a Username">
+                <input type="text" name="name" placeholder="Enter your Name">
+                <input type="email" name="email" placeholder="Enter your Email">
+                <input type="password" name="password" placeholder="Create a Password">
+                <div class="button-container">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="static/signupimg.jpg" alt="signup Cover">
+        </div>
+    </div>
+    <script>
+        function redirectToHomePage() {
+            // Perform your sign-up process here
+
+            // If sign-up is successful, redirect to the home page
+            window.location.href = "/index";
+            return false; // Prevent form submission
+        }
+    </script>
+    
+
+</body>
+</html>

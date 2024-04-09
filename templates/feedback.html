@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #A5D8DD;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .top-bar {
+            background-color: #00008B;
+            padding: 10px 0;
+            text-align: right;
+            color: #fff;
+        }
+        .top-bar a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-bar a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px; /* Oval shape */
+            background-color: #2980b9; /* Light blue color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .top-bar a button:hover {
+            background-color: #87CEEB; /* Lighter shade of blue on hover */
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            /* Adding gradient background */
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        form {
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #3498db;
+        } /* Your existing CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/index"><button>Home</button></a>
+        <a href="/books"><button>Books</button></a>
+        <a href="/question"><button>Question Papers</button></a>
+        <a href="/profile"><button>Profile</button></a>
+        <a href="/feedback"><button>Feedback</button></a>
+    </div>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+            <input type="hidden" name="_replyto" value="jhaanjali1718@gmail.com">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback-type">Feedback Type:</label>
+                <select id="feedback-type" name="feedback-type" required>
+                    <option value="General">General</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Content">Content</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" required></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

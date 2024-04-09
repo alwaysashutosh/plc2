@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#A5D8DD;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #00008B;
+            padding: 10px 20px;
+            color: #fff;
+            position: relative; /* Make the top-bar a relative positioned container */
+        }
+        .hamburger-menu {
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            padding-right: 20px;
+        }
+        .menu-section {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #00008B;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            z-index: 1;
+        }
+        .menu-section a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .menu-section a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .section:nth-child(odd) {
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+        }
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            flex: 1;
+            padding-left: 20px; /* Add left padding for the h2 heading */
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            flex: 1;
+            padding: 0 20px;
+        }
+        .section img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .button-container {
+            flex: 1;
+            text-align: center;
+        }
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-section" id="menuSection">
+            <a href="/index">Home</a>
+            <a href="/books">Books</a>
+            <a href="/question_papers">Question Papers</a>
+            <a href="/profile">Profile</a>
+            <a href="/feedback">Feedback</a>
+            <a href="/about">About Us</a>
+            <a href=''>Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        <div class="section">
+            <img src="https://source.unsplash.com/f2Bi-VBs71M"alt="Books Image">
+            <div>
+                <h2>Books</h2>
+                <p>Explore a wide range of books in various genres and categories. Find your next favorite read and expand your knowledge.</p>
+                <div class="button-container">
+                    <button onclick="window.location.href='/books'">Explore Books</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <img src="https://source.unsplash.com/OQMZwNd3ThU" alt="Question Papers Image">
+            <div>
+                <h2>Question Papers</h2>
+                <p>Access previous question papers to prepare for exams and assessments. Practice with real exam questions and improve your performance.</p>
+                <div class="button-container">
+                    <button onclick="window.location.href='/question'">View Question Papers</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <img src="https://source.unsplash.com/IEqY_ktQFxM" alt="Profile Image">
+            <div>
+                <h2>Profile</h2>
+                <p>Manage your profile settings, update your information, and track your progress. Keep your profile up-to-date for a personalized experience.</p>
+                <div class="button-container">
+                    <button onclick="window.location.href='/profile'">View Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <img src= "https://source.unsplash.com/9V3EPIan2ps" alt="Feedback Image">
+            <div>
+                <h2>Feedback</h2>
+                <p>Share your thoughts, suggestions, and feedback with us. Your input helps us improve our services and cater to your needs better.</p>
+                <div class="button-container">
+                    <button onclick="window.location.href='/feedback'">Give Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menuSection = document.getElementById("menuSection");
+            if (menuSection.style.display === "block") {
+                menuSection.style.display = "none";
+            } else {
+                menuSection.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

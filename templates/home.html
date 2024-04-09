@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A5D8DD; /* Changed background color to blue */
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #00008B; /* Changed top bar background color to white */
+            padding: 10px 20px; /* Added padding to top bar for better alignment */
+            text-align: right; /* Aligned content to the right */
+            color: #333;
+        }
+        .top-bar a {
+            margin: 0 10px; /* Adjusted margin for buttons */
+            color: #00008B;
+            text-decoration: none;
+        }
+        .top-bar a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px; /* Made buttons oval-shaped */
+            background-color: #2980b9; /* Blue color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .top-bar a button:hover {
+            background-color: #3498db; /* Darker shade of blue on hover */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .section:nth-child(odd) {
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+        }
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            flex: 1;
+            padding: 0 20px;
+        }
+        .section img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .button-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/signup"><button>Sign Up</button></a>
+        <a href="/login"><button>Login</button></a>
+    </div>
+    <div class="container">
+        <h1>Welcome to the E-Book Portal</h1>
+        <div class="section">
+            <img src="static/homepage1.jpg" alt="Discover E-books">
+            <div>
+                <h2>Discover a Vast Collection of E-Books</h2>
+                <p>Explore thousands of e-books covering various genres including fiction, non-fiction, academic, and more. Whether you're looking for a classic novel or the latest bestseller, you'll find it here.</p>
+            </div>
+        </div>
+        <div class="section">
+            <img src="static/homepage2.png" alt="Personalized Recommendations">
+            <div>
+                <h2>Personalized Recommendations</h2>
+                <p>Receive personalized recommendations based on your reading preferences. Our advanced algorithms analyze your reading history to suggest e-books that match your interests.</p>
+            </div>
+        </div>
+        <div class="section">
+            <img src="static/homepage3.jpg" alt="Read Anywhere, Anytime">
+            <div>
+                <h2>Read Anywhere, Anytime</h2>
+                <p>Enjoy the flexibility of reading your favorite e-books on any device, whether it's your smartphone, tablet, or e-reader. Access your library anytime, anywhere, even when you're offline.</p>
+            </div>
+        </div>
+        <div class="section">
+            <img src="static/index4.jpg" alt="Join Our Community">
+            <div>
+                <h2>Join Our Community</h2>
+                <p>Connect with fellow book lovers, participate in discussions, and share your thoughts on your favorite reads. Our vibrant community of readers is always ready to welcome new members.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='/signup">Let's Begin</button>
+        </div>
+    </div>
+</body>
+</html>

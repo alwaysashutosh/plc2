@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Papers Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#A5D8DD;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .question-paper-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .question-paper {
+            width: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .question-paper:hover {
+            transform: translateY(-5px);
+        }
+        .question-paper img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .question-paper-info {
+            padding: 10px;
+            text-align: left;
+        }
+        .question-paper-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .question-paper-subject {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .question-paper-description {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .download-link {
+            display: block;
+            text-decoration: none;
+            color: #2980b9;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .top-bar {
+            background-color: #00008B;
+            padding: 10px 0;
+            text-align: right;
+            color: #fff;
+        }
+        .top-bar a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-bar a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px; /* Oval shape */
+            background-color: #2980b9; /* Light blue color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .top-bar a button:hover {
+            background-color: #87CEEB; /* Lighter shade of blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/index"><button>Home</button></a>
+        <a href="/books"><button>Books</button></a>
+        <a href="/question"><button>Question Papers</button></a>
+        <a href="/profile"><button>Profile</button></a>
+        <a href="/feedback"><button>Feedback</button></a>
+    </div>
+    <div class="container">
+        <h1>Explore Our Question Papers Collection</h1>
+        <div class="question-paper-container">
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link.pdf" class="question-papers">
+                <img src="static/QP.jpg" alt="PCS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">PCS INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Principles Of Communication System</div>
+                    <a href="PCS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="OOPS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">OOPS INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Object Oriented Programming</div>
+                    <a href="OOPS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">CS INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Control Systems</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="SS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">SS INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Signals and Systems</div>
+                    <a href="SS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+               </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="M3 Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">M3 INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Mathematics 3</div>
+                    <a href="PCS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="PCS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">EC INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Electrical Circuit</div>
+                    <a href="EC_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="Data Structure Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">DS INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Data Structure</div>
+                    <a href="DS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="PCS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">DC INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Digital circuit</div>
+                    <a href="DC_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">CS ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Control Systems</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">PCS ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Principles Of Communication Systems</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">DS ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Data Structure</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">SS ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Signals And Systems</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">OOPS ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Object Oriented Programming</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">EC ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Electrical Circuit</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">EXC ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Electronic Circuit</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">M3 ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Mathematics 3</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="CS Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">DC ENDSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Digital circuit</div>
+                    <a href="CS_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>
+            </div>
+            <div class="question-paper">
+                <a href="https://drive.google.com/drive/folders/1t0byh9ummIGOkT_97P1OdZgpOKopiUPU?usp=drive_link" class="question-papers">
+                <img src="static/QP.jpg" alt="Electronics Circuit Insem PYQ">
+                <div class="question-paper-info">
+                    <div class="question-paper-title">EXC INSEM PYQ</div>
+                    <div class="question-paper-subject">Subject: Electronics Circuit</div>
+                    <a href="EC_Insem_PYQ.pdf" class="download-link" download>Download PDF</a>
+                </div>34
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#A5D8DD;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .top-bar {
+            background-color: #00008B;
+            padding: 10px 0;
+            text-align: right;
+            color: #fff;
+        }
+        .top-bar a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-bar a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px; /* Oval shape */
+            background-color: #2980b9; /* Light blue color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .top-bar a button:hover {
+            background-color: #87CEEB; /* Lighter shade of blue on hover */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .book {
+            width: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        .book::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        .book:hover {
+            transform: translateY(-5px);
+        }
+        .book img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .book-info {
+            padding: 10px;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+        .book-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: rgb(55, 0, 255);
+        }
+        .book-author {
+            color:  rgb(55, 0, 255);
+            margin-bottom: 10px;
+        }
+        .book-description {
+            font-size: 14px;
+            line-height: 1.4;
+            color: rgb(55, 0, 255);
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+            .book-container {
+                justify-content: center;
+                gap: 10px;
+            }
+            .book {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                margin: 30px auto;
+                padding: 15px;
+            }
+            .book-container {
+                gap: 15px;
+            }
+            .book {
+                width: calc(33.33% - 15px);
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .container {
+                margin: 50px auto;
+                padding: 20px;
+            }
+            .book-container {
+                gap: 20px;
+            }
+            .book {
+                width: calc(25% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="/index"><button>Home</button></a>
+        <a href="/books"><button>Books</button></a>
+        <a href="/question"><button>Question Papers</button></a>
+        <a href="/profile"><button>Profile</button></a>
+        <a href="/feedback"><button>Feedback</button></a>
+    </div>
+    <div class="container">
+        <h1>Explore Our Books Collection</h1>
+        <div class="book-container">
+            <a href="https://drive.google.com/file/d/15bXR4IPAUksmVoieVUVZ7Oi0Gg8N3DVl/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Signals And Systems</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">4th Semester ENTC</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/196eZeHwTllejhRQ0QOM2xhyCqS88AL49/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Principle Of Communication Systems</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">4th Semester ENTC</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1jM8rxTh8WJmHCUVJIt26pOkVzMlILsmS/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title"></div>
+                    <div class="book-author">Object Oriented Programming</div>
+                    <div class="book-description">4th Semester ENTC</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1oDDHBdI53sXkaseD3V-UvVT67NhcvItb/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Control Systems</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">4th Semester ENTC</div>
+                </div>
+            </a>f
+            <a href="https://drive.google.com/file/d/1GwdPNIAhWyYRMwMalFXpmzmUqmjF2TsO/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Digital Circuit</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">3rd Semester ENTC</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1hnmd1cBlj5UdUBRuNKxpOZg0mQKnv42k/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Electrical Circuit</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">3rd Semester ENTC</div>
+                </div>
+            </a>
+            <a href="book2.pdf" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Electronics Circuit</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">3rd Semester ENTC</div>
+                </div>
+            </a>
+            <a href="C:\Users\Anjali jha\Downloads\Data Structure.pdf" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Data Structure</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">3rd Semester ENTC</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1d_vPpLVbr9xMvocGWusOm1kX8p-JytGa/view?usp=drive_link" class="book">
+                <img src="static/book.jpg" alt="Book Cover">
+                <div class="book-info">
+                    <div class="book-title">Mathematics 3</div>
+                    <div class="book-author">Author Name </div>
+                    <div class="book-description">3rd Semester ENTC</div>
+                </div>
+            </a>
+            <!-- Add more books as needed -->
+        </div>
+    </div>
+</body>
+</html>
